@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Adăugare Pacient</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Adăugare Pacient Nou</h2>
+
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% elif success %}
+            <div class="alert alert-success">{{ success }}</div>
+        {% endif %}
+
+        <form method="POST">
+            <div class="mb-3">
+                <label for="cnp" class="form-label">CNP</label>
+                <input type="text" class="form-control" id="cnp" name="cnp" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nume" class="form-label">Nume</label>
+                <input type="text" class="form-control" id="nume" name="nume" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="prenume" class="form-label">Prenume</label>
+                <input type="text" class="form-control" id="prenume" name="prenume" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="diagnostic" class="form-label">Diagnostic Medical</label>
+                <input type="text" class="form-control" id="diagnostic" name="diagnostic" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Adaugă pacient</button>
+            <a href="/lista_pacienti" class="btn btn-secondary ms-2">Înapoi la listă</a>
+        </form>
+    </div>
+
+</body>
+</html>

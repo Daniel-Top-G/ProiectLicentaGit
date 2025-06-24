@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezultat MRI Scan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card p-4 shadow-sm text-center">
+            <h3>Rezultatul MRI Scan</h3>
+            <p class="{{ color }}">{{ result }}</p>
+            
+            {% if tumor_images %}
+                <h5 class="mt-4">Imagini cu tumoare detectată:</h5>
+                <div class="row mt-3">
+                    {% for img in tumor_images %}
+                        <div class="col-md-3 mb-3">
+                           <img src="{{ url_for('static', filename=img) }}" class="img-fluid rounded shadow" width="500">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="text-muted mt-4">Nu au fost detectate tumori în niciuna dintre imagini.</p>
+            {% endif %}
+
+            <a href="/MRI2" class="btn btn-secondary mt-4">← Înapoi la Pagina Anterioară</a>
+        </div>
+    </div>
+</body>
+</html>
