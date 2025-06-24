@@ -14,7 +14,7 @@ from firebase_database import db
 from validare_cnp import validare_cnp
 
 app = Flask(__name__)
-app.secret_key = 'secret123'
+
 
 firebase = pyrebase.initialize_app(firebase_config)
 auth = firebase.auth()
