@@ -8,7 +8,6 @@ Conținut livrabil
 - Arhitectura aplicației (imagini + descriere).
 - Modelele antrenate (.h5 sau .tflite).
 - Documentația proiectului (PDF sau DOCX).
-- Fișierul `requirements.txt` cu toate pachetele necesare.
 - Fisiere HTML/CSS/JS pentru interfață și Flask pentru backend.
 
 # Link Git repository
